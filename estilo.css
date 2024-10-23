@@ -1,0 +1,169 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    --color1:#0000ff;
+    --color2:#f5f5dc;
+    --color3:#a52a2a;
+    --color4:#000000; /*AFECTA A LOS TEXTOS EN BLOG Y VIDEOS*/
+}
+#principal{
+    height: 748px;
+    background-image: url(img/Nestle-fondo-index.jpg);
+    background-position: center;
+    background-size:cover;
+}
+#texto_index{ /*Para Título y Descripción del Index*/
+    color: var(--color2);
+}
+#contenedor{    
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;  
+    font-family:'Franklin Gothic Medium';
+}
+#navegador{ /*barra de navegación en blog,galeria y videos*/
+    position: sticky; /*Permite que el contenido dentro también se mueva con el cuadro*/
+    top:0;
+    background-color: white; /*Permite que al bajar la barra de navegación "cubra" el contenido*/
+    border:1px solid white; /*Permite que al bajar la barra de navegación "cubra" el contenido*/
+    z-index: 20; /*Permite que al bajar la barra de navegación "cubra" el contenido*/
+}
+.menu{ /*barra de navegación*/
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin:10px;
+}
+.menu li{
+    padding:10px
+}
+.menu li a{
+    text-decoration: none;
+    padding:10px;
+    text-transform: uppercase;
+    color: var(--color2)
+}
+.menu li a:hover{
+    opacity: 0.5; /*opacidad en la barra de navegación*/
+    text-decoration: underline brown;
+}
+h1{ /*Texto superior en blog, galeria y videos*/
+    font-size: 80px;
+    letter-spacing: 3px;
+    padding:20px;
+    font-style:italic;
+    text-align: center;
+}
+h1 a{
+    color:var(--color3);
+    text-decoration: none; 
+}
+h1 a:hover{
+    opacity: 50%;
+}
+h2{ /*Subtitulo*/
+    font-size: 25px;
+    margin: 20px;
+    text-align: center;
+}
+#nestle{ /*main id*/
+    width: 60%;
+    margin:auto;
+    height: 1700px;
+}
+#nestle nav ul a{ /*color de barra de navegación en blog,galeria y videos*/
+    color:var(--color1)
+}
+#contenido{
+    padding:20px;
+    color: var(--color3);
+}
+#fabrica img{ /*imagen principal en blog*/
+    width: 100%;
+}
+#lateral_izq{ /*imagen lateral izquierda en blog*/
+     float:left;
+     margin:10px;
+     width: 200px;
+}
+aside{ /*contenido en foto lateral derecha en blog*/
+    float:right;
+    text-align: center;
+    font-size: 13px;
+    color:var(--color4)
+}
+#foto{ /*foto lateral derecha en blog*/
+    width:40px;
+    border-radius: 50%;    
+}
+#contenido p{ /*párrafo*/
+    text-align: justify;
+    padding:20px;
+    color: var(--color4);
+}
+footer p{
+    margin-bottom: 30px;
+}
+#galeria{ /*flexbox para centrar las imagenes*/
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.item { /*márgenes para las imagenes*/
+    width: 30%;  
+    margin:14px;
+    text-align: center; 
+}
+.item img { /*sombreado en las imagenes*/
+  width:100%;
+  box-shadow: 5px 5px 5px var(--color4);
+}
+.item a{ /*opacidad de la imagen*/
+    opacity: 0.8;
+}
+.item a:hover{
+    opacity: 1; /*opacidad al pasar el cursor*/
+}
+#contenido .item p{ /*texto debajo de la imagen*/
+    text-align: center;
+    font-style: italic;
+    color:var(--color3);
+}
+.video{ /*bordeado y centrado del video en cuadro*/
+    border:5px double var(--color4);
+    position:relative;
+    padding-bottom: 55.5%;
+    height:0 ;
+    margin-top: 10px;
+    box-shadow: 5px 5px 5px var(--color4);
+}
+.video iframe{ /*contenido al insertar un video*/
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.redes{ /*contenido dentro de etiqueta footer*/
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+.redes li a{
+    padding: 5px; /*separación de iconos de redes*/
+}
+.redes li a:hover{
+    opacity: 0.5; /*opacidad en iconos de redes en footer*/
+}
+.redes li a img{
+    filter: invert(100%); /*filtro para tener los iconos png en blanco (color original negro)*/
+}
+#nestle .redes li a img{ /*iconos en footer dentro de blog, galeria y videos*/
+    filter: invert(0); /*filtro para no perder el color negro*/
+}
